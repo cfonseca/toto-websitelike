@@ -27,7 +27,6 @@ toto = Toto::Server.new do
   # set :ext,       'txt'                                     # file extension for articles
   # set :cache,      28800                                    # cache duration, in seconds
 	
-	set :url 'http://morning-mountain-681.heroku.com/'
   set :date, lambda {|now| now.strftime("%B #{now.day.ordinal} %Y") }
 end
 
