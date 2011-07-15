@@ -1,7 +1,7 @@
 title: "Testing Books"
 date: 2011/05/18
 category: book
-thumbnail: http://img.usabilitypost.com/books/rocketsurgery.png
+thumbnail: http://ecx.images-amazon.com/images/I/41xhA5EwnyL._BO2,204,203,200_PIsitb-sticker-arrow-click,TopRight,35,-76_AA300_SH20_OU01_.jpg
 book_author: 'Steve Krug'
 
 Dorothy lived in the midst of the great Kansas prairies, with Uncle Henry, 
