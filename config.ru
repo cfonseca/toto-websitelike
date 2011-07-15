@@ -26,16 +26,9 @@ toto = Toto::Server.new do
   # set :ext,       'txt'                                     # file extension for articles
   # set :cache,      28800                                    # cache duration, in seconds
 	
-	set :author, "Cristina Fonseca"
-	set :date, lambda {|now| now.strftime("%d %b %Y") }
-	set :summary, :max => 1000, :delim => /~\n/
-	set :disqus, 'fadeyev'
-	set :title, 'Dmitry Fadeyev'
-	set :url, 'http://fadeyev.net'
-	
-  	set :date, lambda {|now| now.strftime("%B #{now.day.ordinal} %Y") }
 
 
+  set :date, lambda {|now| now.strftime("%B #{now.day.ordinal} %Y") }
   set :description, 'This is our blog!!!'
 
 
