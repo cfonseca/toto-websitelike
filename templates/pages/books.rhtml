@@ -1,0 +1,6 @@
+<% @articles.select {|a| a[:category] == 'book' }[0...10].each do |article| %>
+    <a href="<%= article.path %>"><%= article.title %></a>
+    <img src="<%= article.thumbnail %>" />
+    by <%= article.book_author %>
+    etc ...
+<% end %>

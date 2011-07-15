@@ -4,10 +4,40 @@
     <link rel="stylesheet" type="text/css" href="/css/main.css">
     <link rel="alternate" type="application/atom+xml" title="<%= title %> - feed" href="/index.xml" />
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/> 
-    <title><%= title %></title>
+	<meta name="description" content="<%= @context[:description] %>" />
+	<link rel="alternate" type="application/rss+xml" title="myblog" href="http://feeds.feedburner.com/myblog" />
+    <title>
+	<% if @path == 'index' %>
+	    Your Blog Name
+	<% elsif @path.split('/').compact.length == 4 %>
+	    <%= title %> - Your Blog Name
+	<% else %>
+	    <%= @path.capitalize.gsub(/[-]/, ' ') %> - Your Blog Name
+	<% end %>
+	</title>
+	
+	<script>
+		var disqus_developer = 1
+	</script>
+	
   </head>
   <body>
     <section>
+		<ul>
+		    <li <%= ' class="active"' if @path == 'index' %>>
+		        <a href="/">Home</a>
+		    </li>
+			 <li <%= ' class="active"' if @path == 'blog' %>>
+			        <a href="/blog">Blog</a>
+			    </li>
+		    <li <%= ' class="active"' if @path == 'archives' %>>
+		        <a href="/archives">Archive</a>
+		    </li>
+		    <li <%= ' class="active"' if @path == 'books' %>>
+		        <a href="/books">Books</a>
+		    </li>
+		</ul>
+	
       <%= yield %> 
     </section>
     <footer>
